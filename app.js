@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require("dotenv").config()
 const path = require("path");
 const ejs = require("ejs");
 const db = require("./config/db")
@@ -11,7 +12,7 @@ const expressSession = require("express-session");
 const flash = require("connect-flash");
 const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3000
-require("dotenv").config()
+
 
 app.use(expressSession({
     secret:process.env.SESSION_KEY,
