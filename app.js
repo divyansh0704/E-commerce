@@ -10,6 +10,7 @@ const usersRoutes = require("./routes/usersRoutes");
 const expressSession = require("express-session");
 const flash = require("connect-flash");
 const cookieParser = require("cookie-parser");
+const PORT = process.env.PORT || 3000
 require("dotenv").config()
 
 app.use(expressSession({
@@ -31,6 +32,6 @@ app.use("/", indexfile);
 
 
 
-app.listen(3000,()=>{
-    console.log("server is running on port 3000")
+app.listen(PORT,()=>{
+    console.log(`server is running on port ${PORT}`)
 })
